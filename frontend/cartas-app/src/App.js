@@ -51,9 +51,12 @@ function App() {
     sounds.openPack.currentTime = 0;
     sounds.openPack.play();
 
-    setTimeout(async () => {
-      const res = await fetch(`${BASE_URL}/pack`);
-      const data = await res.json();
+    setTimeout(() => {
+      const data = [
+        { nombre: "Niddhog", imagen: "/cartas/niddhog.png", rareza: "Exotic" },
+        { nombre: "Levi", imagen: "/cartas/levi.png", rareza: "Rare" },
+        { nombre: "Jack", imagen: "/cartas/jack.png", rareza: "Common" }
+      ];
 
       sounds.cardReveal.currentTime = 0;
       sounds.cardReveal.play();
@@ -62,6 +65,7 @@ function App() {
       setShowCards(true);
       setOpening(false);
       setCollection(prev => [...prev, ...data]);
+    }, 1200);
 
       const rareCards = data.filter(c => ["Exotic", "Legendary"].includes(c.rareza));
       if (rareCards.length > 0) {
