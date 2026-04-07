@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     Object.values(sounds).forEach(s => s.load());
-  }, []);
+  }, [sounds]);
 
   // =======================
   // FUNCIONES
