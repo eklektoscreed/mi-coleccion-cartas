@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useMemo, useEffect } from "react";
 
 function App() {
   const [revealed, setRevealed] = useState([]);
@@ -26,13 +27,13 @@ function App() {
   // =======================
   // SONIDOS
   // =======================
-  const sounds = {
+  const sounds = useMemo(() => ({
     openPack: new Audio("/sounds/open-pack.mp3"),
     cardReveal: new Audio("/sounds/card-reveal.mp3"),
     flipPage: new Audio("/sounds/flip-page.wav"),
     epic: new Audio("/sounds/epic.wav"),
     legendary: new Audio("/sounds/legendary.mp3"),
-  };
+  }), []);
 
   useEffect(() => {
     Object.values(sounds).forEach(s => s.load());
