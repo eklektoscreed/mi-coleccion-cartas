@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useMemo, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
+
 
 function App() {
   const [revealed, setRevealed] = useState([]);
