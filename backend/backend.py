@@ -47,8 +47,40 @@ cards = [
         "imagen": "/assets/NDM.png"
     },
     {
-        "nombre": "Momento Incómodo en la Taberna",
+        "nombre": "El Banquete del Gansito",
         "imagen": "/assets/MIT.png"
+    },
+    {
+        "nombre": "La Coronación de Berrian",
+        "imagen": "/assets/LCB.png"
+    },
+    {
+        "nombre": "El Enfrentamiento en el Bosque Maldito",
+        "imagen": "/assets/EEBM.png"
+    },
+    {
+        "nombre": "La Batalla por Magnia",
+        "imagen": "/assets/LBM.png"
+    },
+    {
+        "nombre": "La Caída del Espadachín",
+        "imagen": "/assets/LCE.png"
+    },
+    {
+        "nombre": "La Gran Fiesta de Magnia",
+        "imagen": "/assets/LBM.png"
+    },
+    {
+        "nombre": "Momento Incómodo en la Taberna",
+        "imagen": "/assets/BG.png"
+    },
+    {
+        "nombre": "Confrontación con la Araña Negra",
+        "imagen": "/assets/CAN.png"
+    },
+    {
+        "nombre": "El Precio del Poder Arcano",
+        "imagen": "/assets/EPPA.png"
     }
 ]
 
