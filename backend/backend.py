@@ -45,6 +45,10 @@ cards = [
     {
         "nombre": "Niddhog, Devorador de Mundos",
         "imagen": "/assets/NDM.png"
+    },
+    {
+        "nombre": "Momento Incómodo en la Taberna",
+        "imagen": "/assets/MIT.png"
     }
 ]
 
