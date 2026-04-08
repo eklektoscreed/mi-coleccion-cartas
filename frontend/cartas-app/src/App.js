@@ -12,7 +12,7 @@ function App() {
   const [page, setPage] = useState(0); // página de colección
   const [zoomCard, setZoomCard] = useState(null); // carta seleccionada para zoom
 
-  const BASE_URL = "http://127.0.0.1:8000";
+  const BASE_URL = "https://mi-coleccion-cartas-production.up.railway.app/";
 
   const rarezaColor = {
     "Common": "#ccc",
@@ -51,12 +51,9 @@ function App() {
     sounds.openPack.currentTime = 0;
     sounds.openPack.play();
 
-    setTimeout(() => {
-      const data = [
-        { nombre: "Niddhog", imagen: "/cartas/niddhog.png", rareza: "Exotic" },
-        { nombre: "Levi", imagen: "/cartas/levi.png", rareza: "Rare" },
-        { nombre: "Jack", imagen: "/cartas/jack.png", rareza: "Common" }
-      ];
+    setTimeout(async () => {
+      const res = await fetch(`${BASE_URL}/pack`);
+      const data = await res.json();
 
       sounds.cardReveal.currentTime = 0;
       sounds.cardReveal.play();
@@ -65,7 +62,6 @@ function App() {
       setShowCards(true);
       setOpening(false);
       setCollection(prev => [...prev, ...data]);
-    }, 1200);
 
       const rareCards = data.filter(c => ["Exotic", "Legendary"].includes(c.rareza));
       if (rareCards.length > 0) {
