@@ -56,8 +56,8 @@ function App() {
       let data = [];
 
       try {
-        console.log("URL FINAL:", `${BASE_URL}/pack`);
-        const res = await fetch(`${BASE_URL}/pack`);
+        const res = await fetch("https://mi-coleccion-cartas-production.up.railway.app/pack");
+        console.log("FETCH HARDCODE");
 
         if (!res.ok) {
           throw new Error("Error en la API");
