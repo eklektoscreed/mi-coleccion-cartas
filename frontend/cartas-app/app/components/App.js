@@ -12,7 +12,7 @@ function App() {
   const [page, setPage] = useState(0); // página de colección
   const [zoomCard, setZoomCard] = useState(null); // carta seleccionada para zoom
 
-  const BASE_URL = "https://mi-coleccion-cartas-production.up.railway.app/pack";
+  const BASE_URL = "https://mi-coleccion-cartas-production.up.railway.app";
 
   const rarezaColor = {
     "Common": "#ccc",
@@ -52,8 +52,28 @@ function App() {
     sounds.openPack.play();
 
     setTimeout(async () => {
-      const res = await fetch(`${BASE_URL}/pack`);
-      const data = await res.json();
+      let data = [];
+
+      try {
+        const res = await fetch(`${BASE_URL}/pack`);
+
+        if (!res.ok) {
+          throw new Error("Error en la API");
+        }
+
+        data = await res.json();
+
+        if (!Array.isArray(data)) {
+          throw new Error("La respuesta no es array");
+        }
+
+      } catch (error) {
+        console.error("ERROR FETCH:", error);
+
+        data = [
+          { nombre: "Fallback", imagen: "/assets/EklektosHDD.png", rareza: "Common" }
+        ];
+      }
 
       sounds.cardReveal.currentTime = 0;
       sounds.cardReveal.play();
