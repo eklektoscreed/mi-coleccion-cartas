@@ -12,7 +12,7 @@ function App() {
   const [page, setPage] = useState(0); // página de colección
   const [zoomCard, setZoomCard] = useState(null); // carta seleccionada para zoom
 
-  const BASE_URL = "https://mi-coleccion-cartas-production.up.railway.app/";
+  const BASE_URL = "https://mi-coleccion-cartas-production.up.railway.app/pack";
 
   const rarezaColor = {
     "Common": "#ccc",
