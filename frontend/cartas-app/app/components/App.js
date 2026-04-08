@@ -56,6 +56,7 @@ function App() {
       let data = [];
 
       try {
+        console.log("URL FINAL:", `${BASE_URL}/pack`);
         const res = await fetch(`${BASE_URL}/pack`);
 
         if (!res.ok) {
