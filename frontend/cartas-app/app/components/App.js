@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 
 
+
 function App() {
   const [revealed, setRevealed] = useState([]);
   const [hover, setHover] = useState({ x: 0, y: 0, index: null });
