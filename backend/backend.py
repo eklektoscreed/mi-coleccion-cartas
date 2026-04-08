@@ -29,6 +29,22 @@ cards = [
     {
         "nombre": "La Mirada a Través del Velo",
         "imagen": "/assets/LMTV.png"
+    },
+    {
+        "nombre": "Berrian, Sombra de Galanodel",
+        "imagen": "/assets/BSG.png"
+    },
+    {
+        "nombre": "Levi, Espada Implacable",
+        "imagen": "/assets/LEI.png"
+    },
+    {
+        "nombre": "Jack, Forajido del Caos",
+        "imagen": "/assets/JFC.png"
+    },
+    {
+        "nombre": "Niddhog, Devorador de Mundos",
+        "imagen": "/assets/NDM.png"
     }
 ]
 
