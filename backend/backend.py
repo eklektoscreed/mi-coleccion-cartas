@@ -81,6 +81,26 @@ cards = [
     {
         "nombre": "El Precio del Poder Arcano",
         "imagen": "/assets/EPPA.png"
+    },
+    {
+        "nombre": "El Paladin Sin Amigos",
+        "imagen": "/assets/EPSA.png"
+    },
+    {
+        "nombre": "El Echo de un Hechizo Prohibido",
+        "imagen": "/assets/EEHP.png"
+    },
+    {
+        "nombre": "El Echo de un Hechizo Prohibido",
+        "imagen": "/assets/EEHP.png"
+    },
+    {
+        "nombre": "Amelia Capitana de la Marea Esmeralda",
+        "imagen": "/assets/ACME.png"
+    },
+    {
+        "nombre": "Entre Luz y Oscuridad",
+        "imagen": "/assets/ELYO.png"
     }
 ]
 
